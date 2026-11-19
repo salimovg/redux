@@ -1,0 +1,202 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Gill Sans', 'Trebuchet MS', Arial, sans-serif;
+  background: #f1f1f3;
+  color: #111;
+}
+
+.container {
+  max-width: 1408px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Header */
+.header {
+  background: #1a85ff;
+  padding: 36px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-links {
+  display: flex;
+  gap: 44px;
+}
+
+.link {
+  color: #fff;
+  font-size: 26px;
+  text-decoration: none;
+}
+
+.link.active {
+  text-decoration: underline;
+  text-underline-offset: 6px;
+}
+
+.badge {
+  display: inline-block;
+  background: red;
+  color: #fff;
+  font-size: 15px;
+  min-width: 26px;
+  height: 26px;
+  line-height: 26px;
+  text-align: center;
+  border-radius: 50%;
+  margin-left: 8px;
+  padding: 0 4px;
+}
+
+.header-total {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* Card */
+main.container {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 44px;
+}
+
+.card h2 {
+  font-size: 28px;
+  margin-bottom: 36px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #efeff0;
+  border-radius: 16px;
+  padding: 26px 22px;
+}
+
+.row-info {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 17px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.muted {
+  color: #777;
+}
+
+.row-actions {
+  display: flex;
+  gap: 18px;
+}
+
+/* Buttons */
+.btn {
+  width: 30px;
+  height: 46px;
+  min-width: 30px;
+  background: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.btn.remove {
+  color: red;
+}
+
+.btn.clear {
+  width: auto;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: 600;
+  color: red;
+}
+
+.add {
+  background: #1a85ff;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.add:disabled {
+  background: #9cc9ff;
+  cursor: not-allowed;
+}
+
+/* Total */
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 36px;
+  padding-top: 28px;
+  border-top: 2px dashed #ddd;
+}
+
+.total-sum {
+  font-size: 26px;
+  margin-top: 6px;
+}
+
+.total-sum b {
+  color: #1a85ff;
+}
+
+@media (max-width: 640px) {
+  .row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .row-info {
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+  .card {
+    padding: 22px;
+  }
+  .header-links {
+    gap: 24px;
+  }
+  .header-total {
+    display: none;
+  }
+}
